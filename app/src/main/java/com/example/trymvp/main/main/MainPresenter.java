@@ -1,5 +1,7 @@
 package com.example.trymvp.main.main;
 
+import android.view.View;
+
 import com.example.trymvp.main.main.MainContract;
 
 /**
@@ -12,5 +14,18 @@ public class MainPresenter implements MainContract.Presenter {
     MainPresenter(MainContract.MvpView view){
 
         mView = view;
+    }
+
+    //////    PRESENTER METHODS /////
+    @Override
+    public void handleSignInButtonClick(View view) {
+             mView.showSignInScreen();
+
+    }
+
+    @Override
+    public void handleSignUpButtonClick(View view) {
+            mView.showSignUpScreen();
+
     }
 }
